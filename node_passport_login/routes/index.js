@@ -19,4 +19,18 @@ router.get('/prost', ensureAuthenticated, (req, res) =>
   })
 );
 
+// Dashboard-> breast
+router.get('/breast', ensureAuthenticated, (req, res) =>
+  res.render('breast', {
+    user: req.user
+  })
+);
+
+// Dashboard-> skin
+router.get('/skin', ensureAuthenticated, (req, res) =>
+  res.render('skin', {
+    user: req.user
+  })
+);
+
 module.exports = router;

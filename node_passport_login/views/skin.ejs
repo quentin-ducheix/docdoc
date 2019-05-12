@@ -26,15 +26,61 @@
           <a class="nav-link disabled" href="/breast">Breast analysis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="/skin">Skin analysis</a>
+          <a class="nav-link disabled" href="/skin">Breast analysis</a>
         </li>
       </ul>
         <a class="btn" href="/users/logout">Logout</a>
     </div>
   </div>
 </nav>
+
+<script>
+// <!-- Bootstrap Notify -->
+function showNotifUpload(from, align){
+
+  $.notify({
+      icon: "loop",
+      message: "Image sent for analysis, the process could take up to several minutes"
+
+  },{
+      type: 'success',
+      timer: 4000,
+      placement: {
+          from: from,
+          align: align
+      }
+  });
+}
+
+</script>
+
 <br/>
-<h1 style="text-align:center">comming soon !</h1>
+<h1 style="text-align:center">Skin cancer analysis</h1>
+<br/><br/><br/>
+<div style="text-align:center">
+  <%= typeof msg != 'undefined' ? msg : '' %>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <div class="file-field input-field">
+        <div style="text-align:center">
+            <label for="image_uploads" class="btn">
+              <i class="material-icons">attach_file</i>
+              <a>Upload your image here</a>
+            </label>
+            <br/>
+            <input type="file" id="image_uploads" name="myImage" accept=".jpg, .jpeg, .png" multiple>
+          </div>
+    </div>
+    <button class="btn" type="submit" onclick="showNotifUpload(0, 0);" >Submit</button>
+  </form>
+</div>
+
+<script>
+
+      var input = document.querySelector('input');
+      var preview = document.querySelector('.preview');
+
+      input.style.opacity = 0;
+</script>
 
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>

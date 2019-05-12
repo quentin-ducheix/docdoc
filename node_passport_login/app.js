@@ -146,12 +146,12 @@ app.use(express.static('./public'));
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if(err){
-      res.render('prost', {
+      res.render('skin', {
         msg: err
       })
     } else {
       if (req.file == undefined) {
-        res.render('prost', {
+        res.render('skin', {
           msg: 'Error: No file selected!'
         })
       } else {
@@ -161,11 +161,11 @@ app.post('/upload', (req, res) => {
         };
         request.post({url:url, formData: data}, function(err, httpResponse, body) {
           if (err) {
-            res.render('prost', {
+            res.render('skin', {
               msg: 'Error while processiong your image!'
             });
           }
-          res.render('prost', {
+          res.render('skin', {
             msg: body
           });
         });
