@@ -191,7 +191,7 @@ app.use('/users', require('./routes/users.js'));
 app.use(express.static('./views'))
 app.use('/assets', express.static('./assets'))
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 80;
 //changed from 5000 to 8081
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
