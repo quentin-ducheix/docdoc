@@ -60,7 +60,7 @@ app.post('/subscribe', (req, res) => {
     return res.json({"success": false, "msg":"Please select captcha"});
   }
   // Secret Key
-  const secretKey = '6LdpvDEUAAAAAHszsgB_nnal29BIKDsxwAqEbZzU';
+  const secretKey = '6LfYW6QUAAAAABP4C8AEd1t1hTUnlefyTKqFjatI';
   // Verify URL
   const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
   // Make Request To VerifyURL
