@@ -1,23 +1,9 @@
 # DocDocEyes
 
+Medical diagnostics with Artificial Intelligence
+DocDocEyes was my first start-up project. The goal of DocDocEyes was to detect cancer on medical imagery.
+On this repository you will find our architecture and the model we used (only the.h5 file contact me for the full code)
 
-### Things Todo:
-
-- [x] Goal of the project
-- [ ] build model neural net
-- [ ] make the webapp (server)
-- [ ] login/register (hide functionnalities when not loged in)
-- [ ] put everything together
-
-### Dataset:
-
-- [x] skin
-- [x] lung
-- [ ] brest (prioritaire)
-- [ ] liver
-- [ ] colon
-- [ ] brain
-- [ ] liver
-- [ ] prostate
-- [ ] eyes
-- [ ] bones
+Our model can detect skin and breast cancer.
+![Test Image 1](archi.png)
+The project was abandoned due to the lack of traction.
